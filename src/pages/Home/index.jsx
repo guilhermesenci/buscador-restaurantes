@@ -4,12 +4,13 @@ import MaterialIcon from '@material/react-material-icon'
 
 import logo from '../../assets/logo.svg'
 import picTeste from '../../assets/logo.svg'
-import { Card } from '../../components'
+import { Card, RestaurantCard, Modal } from '../../components'
 
 import { Container, Search, Logo, Wrapper, Map, Title, Carousel } from './styles'
 
 const Home = () => {
   const [inputValue, setInputValue] = useState('');
+  const [modalOpened, setModalOpened] = useState(true);
 
   const settings = {
     dots: false,
@@ -41,8 +42,10 @@ const Home = () => {
             <Card photo={picTeste} title="teste teste teste" />
           </Carousel>
         </Search>
+        <RestaurantCard />
       </Container>
       <Map />
+      <Modal open={modalOpened} onClose={() => setModalOpened(!modalOpened)} />
     </Wrapper>
   )
 };
