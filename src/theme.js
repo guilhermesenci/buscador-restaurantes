@@ -7,7 +7,7 @@ const theme = {
     success: '#153E01',
   },
   fonts: {
-    regular: 'Robot, sans-serif',
+    regular: 'Roboto, sans-serif',
   },
 };
 
